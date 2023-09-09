@@ -62,3 +62,4 @@ for i in range(20):
 print("Коэфициент Пирсона = " + str(pirs_coef))
 plt.hist(set_of_c, bins=20, edgecolor="black")
 plt.show()
+# темыч момыч
