@@ -1,10 +1,10 @@
 import random
 import numpy as np
 import matplotlib.pyplot as plt
-# прием прием
+
 
 def rando(x, x_len):
-    x_str = str(x**2)
+    x_str = str(x ** 2)
     while (2 * x_len) != len(x_str):
         x_str = "0" + x_str
     x_str = x_str[(int(0.5 * x_len)):-(int(0.5 * x_len))]
