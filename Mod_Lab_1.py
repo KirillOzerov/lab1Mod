@@ -19,7 +19,6 @@ def from_int_to_fraction(x, x_len):
     return float(x_str)
 
 
-# кол-во чисел 40000 разбиение 26 вроде дает норм коэф (разрядность 18)
 razor = 10
 a = random.randint(0, 10 ** razor)
 print("Затравка:")
