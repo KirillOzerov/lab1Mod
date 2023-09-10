@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import matplotlib.pyplot as plt
-
+# прием прием
 
 def rando(x, x_len):
     x_str = str(x**2)
