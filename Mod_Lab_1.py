@@ -21,6 +21,7 @@ def from_int_to_fraction(x, x_len):
 
 razor = 10
 a = random.randint(0, 10 ** razor)
+# a = 9444545119
 print("Затравка:")
 print(a)
 print("Введите кол-во ожидаемых элементов в массиве:")
@@ -35,6 +36,7 @@ while (c not in set_of_c) and (len(set_of_c) < num):
 print(set_of_c)
 print(f'Первое повт: {set_of_c.index(c)}')
 print("Период: " + str(len(set_of_c) - set_of_c.index(c)))
+print("Длина апериодической части: " + str(set_of_c.index(c) - 1))
 print("Кол-во чисел в массиве:")
 print(len(set_of_c))
 print("Введите кол-во разбиений:")
