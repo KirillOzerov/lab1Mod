@@ -1,6 +1,7 @@
 import random
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy
 
 
 def rando(x, x_len):
@@ -21,7 +22,7 @@ def from_int_to_fraction(x, x_len):
 
 razor = 10
 a = random.randint(0, 10 ** razor)
-# a = 9444545119
+# a = 9443445110
 print("Затравка:")
 print(a)
 print("Введите кол-во ожидаемых элементов в массиве:")
@@ -39,6 +40,7 @@ print("Период: " + str(len(set_of_c) - set_of_c.index(c)))
 print("Длина апериодической части: " + str(set_of_c.index(c) - 1))
 print("Кол-во чисел в массиве:")
 print(len(set_of_c))
+set_of_c = set_of_c[:set_of_c.index(c)]
 print("Введите кол-во разбиений:")
 num_of_diaposon = int(input())
 print("Ожмдаемое число попаданий на каждом участке:")
@@ -59,6 +61,8 @@ for i in range(num_of_diaposon):
     a += 1 / num_of_diaposon
     b += 1 / num_of_diaposon
 print("Коэфициент Пирсона = " + str(pirs_coef))
-
+print(scipy.stats.chi2.ppf(1-.1, df=(num_of_diaposon - 1)))
+print(scipy.stats.chi2.ppf(1-.01, df=(num_of_diaposon - 1)))
+print(scipy.stats.chi2.ppf(1-.005, df=(num_of_diaposon - 1)))
 plt.hist(set_of_c, bins=num_of_diaposon, edgecolor="black")
 plt.show()
